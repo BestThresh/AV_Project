@@ -1,0 +1,12 @@
+F:\Research-2016-AV\AV\AV\bin\Debug\AV.exe.config
+F:\Research-2016-AV\AV_Project\AV\bin\Debug\AV.exe.config
+F:\Research-2016-AV\AV_Project\AV\bin\Debug\AV.exe
+F:\Research-2016-AV\AV_Project\AV\bin\Debug\AV.pdb
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.csprojResolveAssemblyReference.cache
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.Form_Main.resources
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.Form_Result.resources
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.Form_scan.resources
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.Properties.Resources.resources
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.csproj.GenerateResource.Cache
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.exe
+F:\Research-2016-AV\AV_Project\AV\obj\Debug\AV.pdb
