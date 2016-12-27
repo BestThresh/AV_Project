@@ -103,7 +103,7 @@
             this.Controls.Add(this.but_view);
             this.Controls.Add(this.progressBar1);
             this.Name = "Form_scan";
-            this.Text = "Form_scan";
+            this.Text = "MSECAV";
             this.Load += new System.EventHandler(this.Form_scan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

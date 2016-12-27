@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_choosefile = new System.Windows.Forms.Button();
+            this.btn_chonfile = new System.Windows.Forms.Button();
             this.btn_OK = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.chk_boot = new System.Windows.Forms.CheckBox();
@@ -36,14 +36,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_choosefile
+            // btn_chonfile
             // 
-            this.btn_choosefile.Location = new System.Drawing.Point(339, 19);
-            this.btn_choosefile.Name = "btn_choosefile";
-            this.btn_choosefile.Size = new System.Drawing.Size(75, 23);
-            this.btn_choosefile.TabIndex = 0;
-            this.btn_choosefile.Text = "Choose File";
-            this.btn_choosefile.UseVisualStyleBackColor = true;
+            this.btn_chonfile.Location = new System.Drawing.Point(339, 19);
+            this.btn_chonfile.Name = "btn_chonfile";
+            this.btn_chonfile.Size = new System.Drawing.Size(75, 23);
+            this.btn_chonfile.TabIndex = 0;
+            this.btn_chonfile.Text = "Chọn File";
+            this.btn_chonfile.UseVisualStyleBackColor = true;
             // 
             // btn_OK
             // 
@@ -101,9 +101,9 @@
             this.Controls.Add(this.chk_boot);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_OK);
-            this.Controls.Add(this.btn_choosefile);
+            this.Controls.Add(this.btn_chonfile);
             this.Name = "Form_Main";
-            this.Text = "Form Chính";
+            this.Text = "MSECAV";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,7 +112,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_choosefile;
+        private System.Windows.Forms.Button btn_chonfile;
         private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox chk_boot;
