@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace AV
 {
-    public partial class Form_Main : Form
+    public partial class Form_Update : Form
     {
-        public Form_Main()
+        public Form_Update()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
