@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,10 @@ namespace AV
             InitializeComponent();
             using (var compiler = new Compiler())
             {
-                compiler.AddRuleFile(".\\Rule\\Rule1.yara");
+                String[] Scan_RuleFile = Directory.GetFiles(".//Rules");
+                foreach (String rulefile in Scan_RuleFile)
+                   compiler.AddRuleFile(".//Rules//Rule1.yara");
+
                 Scan_rule = compiler.GetRules();
             }
         }
