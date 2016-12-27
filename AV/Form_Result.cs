@@ -50,9 +50,9 @@ namespace AV
         {
             if(MessageBox.Show("Bạn có muốn restart","Thông báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
             {
-                ///
-
-                ///
+                /*
+                code khởi động :)
+                */
                 this.Close();
             }
         }
