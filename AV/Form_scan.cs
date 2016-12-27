@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 ﻿using AV;
+=======
+﻿using libyaraNET;
+>>>>>>> refs/remotes/origin/master
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +22,27 @@ namespace AV
         {
             InitializeComponent();
         }
+        private Rules Scan_rule = null;
         private List<String> Scanf_list_FileDir;
         private List<String> _list_FileInfec;
         public Form_scan(List<String> __Scan_ListString_FileDir)
         {
             Scanf_list_FileDir = __Scan_ListString_FileDir;
             InitializeComponent();
-        }
+            using (var compiler = new Compiler())
+            {
+                String[] Scan_RuleFile = Directory.GetFiles(".//Rules");
+                foreach (String rulefile in Scan_RuleFile)
+                   compiler.AddRuleFile(".//Rules//Rule1.yara");
 
+                Scan_rule = compiler.GetRules();
+            }
+        }
+<<<<<<< HEAD
+
+=======
+        
+>>>>>>> refs/remotes/origin/master
         private bool DoScanf(String Scan_String_FileDir)
         {
             return true; 
