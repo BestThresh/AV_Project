@@ -28,5 +28,33 @@ namespace AV
             File.WriteAllLines("./log.txt", Result_List_File);
 
         }
+
+        private void Form_Result_Load(object sender, EventArgs e)
+        {
+            for(int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = i + 1;
+            }
+        }
+
+        private void btn_xoa_all_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells[2].Value = true;
+            }
+
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn restart","Thông báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Question)==DialogResult.OK)
+            {
+                ///
+
+                ///
+                this.Close();
+            }
+        }
     }
 }
