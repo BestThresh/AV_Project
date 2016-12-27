@@ -27,5 +27,51 @@ namespace AV
 
             return true; 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_scan_Load(object sender, EventArgs e)
+        {
+            int SoFileDaQuet = 0, TongSo = 0;
+            int SoFileQuet = 0;
+            txt_tongso.Text = TongSo.ToString();
+            but_view.Hide();
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = 100;
+            progressBar1.Step = 1;
+            for (progressBar1.Value=0; progressBar1.Value < 100; progressBar1.PerformStep())
+            {
+
+                while (SoFileQuet * 100 / TongSo < 1) {
+                    //SoFileQuet += 
+                    if (progressBar1.Value == 99 && SoFileQuet == TongSo % 100)
+                        break;
+                }
+                //txt_daquet.Text += so file quet;
+
+            }
+            but_view.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void but_cancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                   
+            }
+        }
+
+        private void but_view_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
