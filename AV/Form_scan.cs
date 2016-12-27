@@ -16,5 +16,16 @@ namespace AV
         {
             InitializeComponent();
         }
+        private List<String> Scanf_list_FileDir;
+        public Form_scan(List<String> __Scan_ListString_FileDir)
+        {
+            Scanf_list_FileDir = __Scan_ListString_FileDir;
+            InitializeComponent();
+        }
+        private bool DoScanf(String Scan_String_FileDir)
+        {
+
+            return true; 
+        }
     }
 }
