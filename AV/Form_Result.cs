@@ -28,5 +28,10 @@ namespace AV
             File.WriteAllLines("./log.txt", Result_List_File);
 
         }
+
+        private void Form_Result_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
