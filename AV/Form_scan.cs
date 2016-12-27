@@ -1,4 +1,5 @@
-﻿using System;
+﻿using libyaraNET;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,19 @@ namespace AV
         {
             InitializeComponent();
         }
+        private Rules Scan_rule = null;
         private List<String> Scanf_list_FileDir;
         public Form_scan(List<String> __Scan_ListString_FileDir)
         {
             Scanf_list_FileDir = __Scan_ListString_FileDir;
             InitializeComponent();
+            using (var compiler = new Compiler())
+            {
+                compiler.AddRuleFile(".\\Rule\\Rule1.yara");
+                Scan_rule = compiler.GetRules();
+            }
         }
+        
         private bool DoScanf(String Scan_String_FileDir)
         {
 
