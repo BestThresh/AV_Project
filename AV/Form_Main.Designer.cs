@@ -34,6 +34,7 @@
             this.chk_boot = new System.Windows.Forms.CheckBox();
             this.chk_Realtime = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.Main_butExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_chonfile
@@ -53,6 +54,7 @@
             this.btn_OK.TabIndex = 1;
             this.btn_OK.Text = "OK";
             this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // textBox1
             // 
@@ -91,20 +93,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // Main_butExit
+            // 
+            this.Main_butExit.Location = new System.Drawing.Point(349, 261);
+            this.Main_butExit.Name = "Main_butExit";
+            this.Main_butExit.Size = new System.Drawing.Size(75, 23);
+            this.Main_butExit.TabIndex = 9;
+            this.Main_butExit.Text = "Thoát";
+            this.Main_butExit.UseVisualStyleBackColor = true;
+            this.Main_butExit.Click += new System.EventHandler(this.Main_butExit_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(456, 296);
+            this.ControlBox = false;
+            this.Controls.Add(this.Main_butExit);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.chk_Realtime);
             this.Controls.Add(this.chk_boot);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.btn_chonfile);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MSECAV";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +133,7 @@
         private System.Windows.Forms.CheckBox chk_boot;
         private System.Windows.Forms.CheckBox chk_Realtime;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Main_butExit;
     }
 }
 

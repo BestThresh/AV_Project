@@ -1,0 +1,14 @@
+F:\Research-2016-AV\AV_Project\AV\bin\x64\Release\AV.exe.config
+F:\Research-2016-AV\AV_Project\AV\bin\x64\Release\AV.exe
+F:\Research-2016-AV\AV_Project\AV\bin\x64\Release\libyara.NET.dll
+F:\Research-2016-AV\AV_Project\AV\bin\x64\Release\libyara.NET.pdb
+F:\Research-2016-AV\AV_Project\AV\bin\x64\Release\libyara.NET.xml
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.csprojResolveAssemblyReference.cache
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.Form_Main.resources
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.Form_Result.resources
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.Form_scan.resources
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.Properties.Resources.resources
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.csproj.GenerateResource.Cache
+F:\Research-2016-AV\AV_Project\AV\obj\x64\Release\AV.exe
+F:\Research-2016-AV\AV_Project\Release\AV.exe.config
+F:\Research-2016-AV\AV_Project\Release\AV.exe

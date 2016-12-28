@@ -1,0 +1,9 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+dllmain.cpp(75): warning C4101: 'pMsg': unreferenced local variable
+  Initation.cpp
+  Generating code
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\Release\Initation.dll
+  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\Release\Initation.pdb (Full PDB)

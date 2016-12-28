@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+f:\research-2016-av\av_project\initation\dllmain.cpp(75): warning C4101: 'pMsg': unreferenced local variable
+  Initation.cpp
+  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\Debug\Initation.dll
+  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\Debug\Initation.pdb (Full PDB)
