@@ -34,6 +34,7 @@
             this.txt_daquet = new System.Windows.Forms.TextBox();
             this.txt_tongso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -90,12 +91,22 @@
             this.label1.Text = "/";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(48, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Current file";
+            // 
             // Form_scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(490, 223);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_tongso);
             this.Controls.Add(this.txt_daquet);
@@ -118,5 +129,6 @@
         private System.Windows.Forms.TextBox txt_daquet;
         private System.Windows.Forms.TextBox txt_tongso;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
