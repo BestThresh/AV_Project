@@ -4,5 +4,5 @@
 #include "stdafx.h"
 #include "windows.h"
 
-void WINAPI StartMonitor(void);
-void WINAPI StopMonitor(void);
+void WINAPI StartMonitoring(void);
+void WINAPI StopMonitoring(void);

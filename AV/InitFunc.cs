@@ -11,12 +11,12 @@ namespace AV
 {
     static class InitFunc
     {
-        [DllImport("Initation.dll", EntryPoint = "StartMonitor",
+        [DllImport("Initation.dll", EntryPoint = "StartMonitoring",
             CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern void StartMonitor();
-        [DllImport("Initation.dll", EntryPoint = "StopMonitor",
+        public static extern void StartMonitoring();
+        [DllImport("Initation.dll", EntryPoint = "StopMonitoring",
             CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-        public static extern void StopMonitor();
+        public static extern void StopMonitoring();
 
     }
 }

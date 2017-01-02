@@ -16,28 +16,6 @@ namespace AV
         public Form_Main()
         {
             InitializeComponent();
-           
-            
-        }
-
-        private void InitFunction()
-        {
-            InitFunc.StartMonitor();
-        }
-        
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_butExit_Click(object sender, EventArgs e)
-        {
-            InitFunc.StopMonitor();
-        }
-
-        private void btn_OK_Click(object sender, EventArgs e)
-        {
             if (!isSet)
             {
                 isSet = true;
@@ -49,9 +27,31 @@ namespace AV
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
+
 
             }
+
+        }
+
+        private void InitFunction()
+        {
+            InitFunc.StartMonitoring();
+        }
+        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Main_butExit_Click(object sender, EventArgs e)
+        {
+            InitFunc.StopMonitoring();
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

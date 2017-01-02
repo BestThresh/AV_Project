@@ -20,6 +20,7 @@ namespace AV
         }
         private Rules Scan_rule = null;
         private List<String> Scanf_list_FileDir;
+        private List<String> List_FileInfec;
         public Form_scan(List<String> __Scan_ListString_FileDir)
         {
             Scanf_list_FileDir = __Scan_ListString_FileDir;
@@ -47,8 +48,7 @@ namespace AV
 
         private void Form_scan_Load(object sender, EventArgs e)
         {
-            int SoFileDaQuet = 0, TongSo = 0;
-            int SoFileQuet = 0;
+            int SoFileDaQuet = 0, TongSo = Scanf_list_FileDir.Count;
             txt_tongso.Text = TongSo.ToString();
             but_view.Hide();
             progressBar1.Minimum = 0;
@@ -56,14 +56,14 @@ namespace AV
             progressBar1.Step = 1;
             for (progressBar1.Value=0; progressBar1.Value < 100; progressBar1.PerformStep())
             {
-
-                while (SoFileQuet * 100 / TongSo < 1) {
-                    //SoFileQuet += 
-                    if (progressBar1.Value == 99 && SoFileQuet == TongSo % 100)
+                while (SoFileDaQuet% (TongSo/100) !=0) {
+                    if( DoScanf(Scanf_list_FileDir[SoFileDaQuet]))
+                        List_FileInfec.Add(Scanf_list_FileDir[SoFileDaQuet]);
+                    SoFileDaQuet++;
+                    if ( SoFileDaQuet == TongSo )
                         break;
                 }
-                //txt_daquet.Text += so file quet;
-
+                txt_daquet.Text = SoFileDaQuet.ToString();
             }
             but_view.Show();
         }
@@ -77,13 +77,13 @@ namespace AV
         {
             if (MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                   
+                this.Close();
             }
         }
 
         private void but_view_Click(object sender, EventArgs e)
         {
-            
+            Form_Result fm = new Form_Result(List_FileInfec);
         }
     }
 }
