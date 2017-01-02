@@ -45,9 +45,9 @@
             this.dgv_STT,
             this.dgv_filenhiem,
             this.dgv_hanhdong});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(-39, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(577, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(628, 319);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_xoa_all
@@ -88,10 +88,17 @@
             // dgv_hanhdong
             // 
             this.dgv_hanhdong.HeaderText = "Xóa/Bỏ qua";
+            this.dgv_hanhdong.Items.AddRange(new object[] {
+            "Xóa",
+            "Bỏ chọn"});
             this.dgv_hanhdong.Name = "dgv_hanhdong";
             this.dgv_hanhdong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_hanhdong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+<<<<<<< HEAD
             this.dgv_hanhdong.Width = 83;
+=======
+            this.dgv_hanhdong.Width = 150;
+>>>>>>> origin/master
             // 
             // Form_Result
             // 
