@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lab_CurFile = new System.Windows.Forms.Label();
             this.lab_percent = new System.Windows.Forms.Label();
+            this.but_scan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -69,26 +70,28 @@
             // txt_daquet
             // 
             this.txt_daquet.Enabled = false;
-            this.txt_daquet.Location = new System.Drawing.Point(149, 101);
+            this.txt_daquet.Location = new System.Drawing.Point(105, 101);
             this.txt_daquet.Name = "txt_daquet";
             this.txt_daquet.Size = new System.Drawing.Size(44, 20);
             this.txt_daquet.TabIndex = 4;
+            this.txt_daquet.Text = "0";
             this.txt_daquet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_daquet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_tongso
             // 
             this.txt_tongso.Enabled = false;
-            this.txt_tongso.Location = new System.Drawing.Point(241, 101);
+            this.txt_tongso.Location = new System.Drawing.Point(220, 101);
             this.txt_tongso.Name = "txt_tongso";
             this.txt_tongso.Size = new System.Drawing.Size(43, 20);
             this.txt_tongso.TabIndex = 5;
+            this.txt_tongso.Text = "0";
             this.txt_tongso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 104);
+            this.label1.Location = new System.Drawing.Point(181, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 6;
@@ -110,16 +113,27 @@
             this.lab_percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lab_percent.Location = new System.Drawing.Point(444, 41);
             this.lab_percent.Name = "lab_percent";
-            this.lab_percent.Size = new System.Drawing.Size(11, 16);
+            this.lab_percent.Size = new System.Drawing.Size(44, 16);
             this.lab_percent.TabIndex = 8;
-            this.lab_percent.Text = ".";
+            this.lab_percent.Text = "0.00%";
+            // 
+            // but_scan
+            // 
+            this.but_scan.Location = new System.Drawing.Point(363, 99);
+            this.but_scan.Name = "but_scan";
+            this.but_scan.Size = new System.Drawing.Size(75, 23);
+            this.but_scan.TabIndex = 9;
+            this.but_scan.Text = "SCAN";
+            this.but_scan.UseVisualStyleBackColor = true;
+            this.but_scan.Click += new System.EventHandler(this.but_scan_Click);
             // 
             // Form_scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(490, 223);
+            this.ClientSize = new System.Drawing.Size(527, 223);
+            this.Controls.Add(this.but_scan);
             this.Controls.Add(this.lab_percent);
             this.Controls.Add(this.lab_CurFile);
             this.Controls.Add(this.label1);
@@ -146,5 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lab_CurFile;
         private System.Windows.Forms.Label lab_percent;
+        private System.Windows.Forms.Button but_scan;
     }
 }

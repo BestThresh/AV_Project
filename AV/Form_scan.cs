@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace AV
 {
     public partial class Form_scan : Form
@@ -48,30 +48,7 @@ namespace AV
 
         private void Form_scan_Load(object sender, EventArgs e)
         {
-            int SoFileDaQuet = 0, TongSo = Scanf_list_FileDir.Count;
-            txt_tongso.Text = TongSo.ToString();
-            but_view.Hide();
-            progressBar1.Minimum = 0;
-            progressBar1.Maximum = TongSo;
-            progressBar1.Step = 1;
-            List_FileInfec = new List<string>();
             
-            for (progressBar1.Value=0; progressBar1.Value < progressBar1.Maximum; progressBar1.Value++ )
-            {
-                   //lab_CurFile.Text = Scanf_list_FileDir[SoFileDaQuet];
-                
-                    if ( DoScanf(Scanf_list_FileDir[SoFileDaQuet]))
-                        List_FileInfec.Add(Scanf_list_FileDir[SoFileDaQuet]);
-                    SoFileDaQuet++;
-                //lab_percent.Text = ((double)SoFileDaQuet / TongSo).ToString("0.##%");
-                //txt_daquet.Text = SoFileDaQuet.ToString();
-                lab_percent.Text = ((double)progressBar1.Value / progressBar1.Maximum).ToString("0.##%");
-                txt_daquet.Text = progressBar1.Value.ToString();
-                lab_CurFile.Text = Scanf_list_FileDir[progressBar1.Value];
-            }
-            lab_CurFile.Text = "Hoàn thành!";
-            
-            but_view.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -81,7 +58,7 @@ namespace AV
 
         private void but_cancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn hủy kết quả quét?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn hủy kết quả quét?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 this.Close();
             }
@@ -94,7 +71,31 @@ namespace AV
 
         private void progressBar1_RegionChanged(object sender, EventArgs e)
         {
-          
+           
+        }
+
+        private void but_scan_Click(object sender, EventArgs e)
+        {
+            txt_tongso.Text = Scanf_list_FileDir.Count.ToString();
+            but_view.Hide();
+            int SoFileDaQuet = 0 ;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = Scanf_list_FileDir.Count;
+            progressBar1.Step = 1;
+            List_FileInfec = new List<string>();
+            progressBar1.Value = 0;
+            while (progressBar1.Value < progressBar1.Maximum)
+            {
+                if (DoScanf(Scanf_list_FileDir[SoFileDaQuet]))
+                    List_FileInfec.Add(Scanf_list_FileDir[SoFileDaQuet]);
+                SoFileDaQuet++;
+                lab_percent.Text = ((double)(SoFileDaQuet) / progressBar1.Maximum).ToString("0.##%");
+                txt_daquet.Text = SoFileDaQuet.ToString();
+                lab_CurFile.Text = Scanf_list_FileDir[progressBar1.Value];
+                progressBar1.PerformStep();
+            }
+            lab_CurFile.Text = "Hoàn thành!";
+            but_view.Show();
         }
     }
 }
