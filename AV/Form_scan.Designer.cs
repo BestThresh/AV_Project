@@ -34,7 +34,8 @@
             this.txt_daquet = new System.Windows.Forms.TextBox();
             this.txt_tongso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lab_CurFile = new System.Windows.Forms.Label();
+            this.lab_percent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -43,6 +44,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(390, 23);
             this.progressBar1.TabIndex = 1;
+            this.progressBar1.RegionChanged += new System.EventHandler(this.progressBar1_RegionChanged);
             // 
             // but_view
             // 
@@ -66,39 +68,51 @@
             // 
             // txt_daquet
             // 
+            this.txt_daquet.Enabled = false;
             this.txt_daquet.Location = new System.Drawing.Point(149, 101);
             this.txt_daquet.Name = "txt_daquet";
-            this.txt_daquet.Size = new System.Drawing.Size(68, 20);
+            this.txt_daquet.Size = new System.Drawing.Size(44, 20);
             this.txt_daquet.TabIndex = 4;
             this.txt_daquet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_daquet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_tongso
             // 
-            this.txt_tongso.Location = new System.Drawing.Point(270, 101);
+            this.txt_tongso.Enabled = false;
+            this.txt_tongso.Location = new System.Drawing.Point(241, 101);
             this.txt_tongso.Name = "txt_tongso";
-            this.txt_tongso.Size = new System.Drawing.Size(66, 20);
+            this.txt_tongso.Size = new System.Drawing.Size(43, 20);
             this.txt_tongso.TabIndex = 5;
             this.txt_tongso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(240, 104);
+            this.label1.Location = new System.Drawing.Point(211, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "/";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lab_CurFile
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Current file";
+            this.lab_CurFile.AutoSize = true;
+            this.lab_CurFile.Location = new System.Drawing.Point(48, 75);
+            this.lab_CurFile.Name = "lab_CurFile";
+            this.lab_CurFile.Size = new System.Drawing.Size(57, 13);
+            this.lab_CurFile.TabIndex = 7;
+            this.lab_CurFile.Text = "Current file";
+            // 
+            // lab_percent
+            // 
+            this.lab_percent.AutoSize = true;
+            this.lab_percent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_percent.Location = new System.Drawing.Point(444, 41);
+            this.lab_percent.Name = "lab_percent";
+            this.lab_percent.Size = new System.Drawing.Size(11, 16);
+            this.lab_percent.TabIndex = 8;
+            this.lab_percent.Text = ".";
             // 
             // Form_scan
             // 
@@ -106,7 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(490, 223);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lab_percent);
+            this.Controls.Add(this.lab_CurFile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_tongso);
             this.Controls.Add(this.txt_daquet);
@@ -129,6 +144,7 @@
         private System.Windows.Forms.TextBox txt_daquet;
         private System.Windows.Forms.TextBox txt_tongso;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lab_CurFile;
+        private System.Windows.Forms.Label lab_percent;
     }
 }

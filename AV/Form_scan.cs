@@ -25,19 +25,19 @@ namespace AV
         {
             Scanf_list_FileDir = __Scan_ListString_FileDir;
             InitializeComponent();
-            using (var compiler = new Compiler())
-            {
-                String[] Scan_RuleFile = Directory.GetFiles(".//Rules");
-                foreach (String rulefile in Scan_RuleFile)
-                   compiler.AddRuleFile(".//Rules//Rule1.yara");
+            //using (var compiler = new Compiler())
+            //{
+            //    String[] Scan_RuleFile = Directory.GetFiles(".//Rules");
+            //    foreach (String rulefile in Scan_RuleFile)
+            //       compiler.AddRuleFile(".//Rules//Rule1.yara");
 
-                Scan_rule = compiler.GetRules();
-            }
+            //    Scan_rule = compiler.GetRules();
+            //}
         }
         
         private bool DoScanf(String Scan_String_FileDir)
         {
-
+           
             return true; 
         }
 
@@ -52,19 +52,25 @@ namespace AV
             txt_tongso.Text = TongSo.ToString();
             but_view.Hide();
             progressBar1.Minimum = 0;
-            progressBar1.Maximum = 100;
+            progressBar1.Maximum = TongSo;
             progressBar1.Step = 1;
-            for (progressBar1.Value=0; progressBar1.Value < 100; progressBar1.PerformStep())
+            List_FileInfec = new List<string>();
+            
+            for (progressBar1.Value=0; progressBar1.Value < progressBar1.Maximum; progressBar1.Value++ )
             {
-                while (SoFileDaQuet% (TongSo/100) !=0) {
-                    if( DoScanf(Scanf_list_FileDir[SoFileDaQuet]))
+                   //lab_CurFile.Text = Scanf_list_FileDir[SoFileDaQuet];
+                
+                    if ( DoScanf(Scanf_list_FileDir[SoFileDaQuet]))
                         List_FileInfec.Add(Scanf_list_FileDir[SoFileDaQuet]);
                     SoFileDaQuet++;
-                    if ( SoFileDaQuet == TongSo )
-                        break;
-                }
-                txt_daquet.Text = SoFileDaQuet.ToString();
+                //lab_percent.Text = ((double)SoFileDaQuet / TongSo).ToString("0.##%");
+                //txt_daquet.Text = SoFileDaQuet.ToString();
+                lab_percent.Text = ((double)progressBar1.Value / progressBar1.Maximum).ToString("0.##%");
+                txt_daquet.Text = progressBar1.Value.ToString();
+                lab_CurFile.Text = Scanf_list_FileDir[progressBar1.Value];
             }
+            lab_CurFile.Text = "Hoàn thành!";
+            
             but_view.Show();
         }
 
@@ -75,7 +81,7 @@ namespace AV
 
         private void but_cancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn thoát khỏi chương trình?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn hủy kết quả quét?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -84,6 +90,11 @@ namespace AV
         private void but_view_Click(object sender, EventArgs e)
         {
             Form_Result fm = new Form_Result(List_FileInfec);
+        }
+
+        private void progressBar1_RegionChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

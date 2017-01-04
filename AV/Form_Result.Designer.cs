@@ -94,11 +94,8 @@
             this.dgv_hanhdong.Name = "dgv_hanhdong";
             this.dgv_hanhdong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_hanhdong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-<<<<<<< HEAD
             this.dgv_hanhdong.Width = 83;
-=======
             this.dgv_hanhdong.Width = 150;
->>>>>>> origin/master
             // 
             // Form_Result
             // 

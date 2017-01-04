@@ -22,3 +22,6 @@ F:\Research-2016-AV\AV_Project\AV\bin\Debug\libyara.NET.xml
 F:\Research-2016-AV\AV_Project\Debug\AV.exe.config
 F:\Research-2016-AV\AV_Project\Debug\AV.exe
 F:\Research-2016-AV\AV_Project\Debug\AV.pdb
+F:\Research-2016-AV\AV_Project\x64\Debug\AV.exe.config
+F:\Research-2016-AV\AV_Project\x64\Debug\AV.exe
+F:\Research-2016-AV\AV_Project\x64\Debug\AV.pdb
