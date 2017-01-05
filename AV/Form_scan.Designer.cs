@@ -45,7 +45,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(390, 23);
             this.progressBar1.TabIndex = 1;
-            this.progressBar1.RegionChanged += new System.EventHandler(this.progressBar1_RegionChanged);
             // 
             // but_view
             // 
@@ -76,7 +75,6 @@
             this.txt_daquet.TabIndex = 4;
             this.txt_daquet.Text = "0";
             this.txt_daquet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_daquet.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_tongso
             // 
@@ -96,16 +94,14 @@
             this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "/";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lab_CurFile
             // 
             this.lab_CurFile.AutoSize = true;
             this.lab_CurFile.Location = new System.Drawing.Point(48, 75);
             this.lab_CurFile.Name = "lab_CurFile";
-            this.lab_CurFile.Size = new System.Drawing.Size(57, 13);
+            this.lab_CurFile.Size = new System.Drawing.Size(0, 13);
             this.lab_CurFile.TabIndex = 7;
-            this.lab_CurFile.Text = "Current file";
             // 
             // lab_percent
             // 
