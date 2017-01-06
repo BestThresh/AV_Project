@@ -1,6 +1,3 @@
 #include "windows.h"
-extern "C"
-{
-	__declspec(dllexport) void WINAPI StartMonitoring(void);
-	__declspec(dllexport) void WINAPI StopMonitoring(void);
-}
+void WINAPI StartMonitoring(void);
+void WINAPI StopMonitoring(void);

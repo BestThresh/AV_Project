@@ -17,7 +17,7 @@ namespace AV
         public Form_Main()
         {
             InitializeComponent();
-            if (!isSet)
+             if (!isSet)
             {
                 isSet = true;
                 try
@@ -37,6 +37,7 @@ namespace AV
         private void InitFunction()
         {
             InitFunc.StartMonitoring();
+            
         }
         
 
@@ -47,6 +48,7 @@ namespace AV
 
         private void Main_butExit_Click(object sender, EventArgs e)
         {
+            isSet = false;
             InitFunc.StopMonitoring();
             this.Close();
         }

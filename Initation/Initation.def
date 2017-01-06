@@ -1,0 +1,5 @@
+LIBRARY Initation
+SECTIONS .sd_64bithookdll SHARED READ WRITE
+EXPORTS
+	StartMonitoring @1
+	StopMonitoring @2
