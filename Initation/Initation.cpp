@@ -432,10 +432,6 @@ void WINAPI CreateAllHooks(void)
 		if (_bIsHooked == FALSE)
 		{
 			_bIsHooked = TRUE;
-			/*CreateHook((unsigned __int64)ExtTextOutA, (unsigned __int64)ShadowExtTextOutA, (PHOOKREC)&_hrExtTextOutA);
-			CreateHook((unsigned __int64)ExtTextOutW, (unsigned __int64)ShadowExtTextOutW, (PHOOKREC)&_hrExtTextOutW);
-			CreateHook((unsigned __int64)TextOutA, (unsigned __int64)ShadowTextOutA, (PHOOKREC)&_hrTextOutA);
-			CreateHook((unsigned __int64)TextOutW, (unsigned __int64)ShadowTextOutW, (PHOOKREC)&_hrTextOutW);*/
 			CreateHook((unsigned __int64)TerminateProcess, (unsigned __int64)ShadowTerminateProcess, (PHOOKREC)&_hrTerminateProcess);
 		}
 	}
@@ -448,10 +444,6 @@ void WINAPI DestroyAllHooks(void)
 	if (_bIsHooked == TRUE)
 	{
 		_bIsHooked = FALSE;
-		/*DestroyHook((PHOOKREC)&_hrExtTextOutA);
-		DestroyHook((PHOOKREC)&_hrExtTextOutW);
-		DestroyHook((PHOOKREC)&_hrTextOutA);
-		DestroyHook((PHOOKREC)&_hrTextOutW);*/
 		DestroyHook((PHOOKREC)&_hrTerminateProcess);
 	}
 
