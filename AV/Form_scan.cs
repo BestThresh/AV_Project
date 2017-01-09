@@ -25,27 +25,74 @@ namespace AV
         public Form_scan(List<String> __Scan_ListString_FileDir)
         {
             Scanf_list_FileDir = __Scan_ListString_FileDir;
+           
+           
             InitializeComponent();
-            //using (var compiler = new Compiler())
-            //{
-            //    String[] Scan_RuleFile = Directory.GetFiles(".//Rules");
-            //    foreach (String rulefile in Scan_RuleFile)
-            //       compiler.AddRuleFile(".//Rules//Rule1.yara");
 
-            //    Scan_rule = compiler.GetRules();
-            //}
         }
         
         private bool DoScanf(String Scan_String_FileDir)
         {
-           
-            return true; 
+           Scanner __scanner = new Scanner() ;
+           List<ScanResult> list_SR= __scanner.ScanFile(Scan_String_FileDir, Scan_rule);
+            return true;
         }
 
         
+        private void Load_Rules()
+        {
+            using (var ctx = new YaraContext())
+            {
+                using (var compiler = new Compiler())
+                {
+                    String[] Scan_RuleFile = Directory.GetFiles(Application.StartupPath+ "\\Rules");
+                    if (Scan_RuleFile == null)
+                    {
+                        ErrorAlert.ShowMessageOK("Chưa có dữ liệu mã độc, ấn cập nhật để download dữ liệu mã độc");
+                        this.Close();
+                        return;
+                    }
+                    bool Have_rule = false;
+                    foreach (String rulefile in Scan_RuleFile)
+                        try
+                        {
+                            if (Path.GetExtension(rulefile) == ".yar" || Path.GetExtension(rulefile) == ".yara")
+                            {
+                                Have_rule = true;
+                                compiler.AddRuleFile(rulefile);
+                            }
+                        }
+                        catch
+                        {
 
+                        }
+                    if (!Have_rule)
+                    {
+                        ErrorAlert.ShowMessageOK("Chưa có dữ liệu mã độc, ấn cập nhật để download dữ liệu mã độc");
+                        this.Close();
+                        return;
+                    }
+                    try
+                    {
+                        Scan_rule = compiler.GetRules();
+                        MessageBox.Show("Compile Rule ok");
+                    }
+                    catch (Exception e)
+                    {
+                        ErrorAlert.ShowMessageOK(
+                            String.Format("Nạp dữ liệu mã độc lỗi :{0}!", e.Message));
+                        this.Close();
+                        return;
+                    }
+
+
+                }
+
+            }
+        }
         private void Form_scan_Load(object sender, EventArgs e)
         {
+            Load_Rules();
             bw = new BackgroundWorker();
             bw.WorkerReportsProgress = true; // ho tro bao cao tien do
             bw.WorkerSupportsCancellation = true; // cho phep dung tien trinh
@@ -59,7 +106,8 @@ namespace AV
 
         private void but_cancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn muốn hủy kết quả quét?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            
+            if (ErrorAlert.ShowMessageConfirm("Bạn muốn hủy kết quả quét?") == DialogResult.Yes)
             {
                 this.Close();
             }

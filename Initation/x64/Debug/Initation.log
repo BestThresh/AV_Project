@@ -1,4 +1,2 @@
 ﻿  Initation.cpp
-     Creating library F:\Research-2016-AV\AV_Project\x64\Debug\Initation.lib and object F:\Research-2016-AV\AV_Project\x64\Debug\Initation.exp
-  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\x64\Debug\Initation.dll
-  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\x64\Debug\Initation.pdb (Full PDB)
+f:\research-2016-av\av_project\initation\initation.cpp(515): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
