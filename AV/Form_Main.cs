@@ -68,7 +68,11 @@ namespace AV
                 string[] FileInSelectFolder = Directory.GetFiles(select_folder);
                 string[] FolderInSelectFolder = Directory.GetDirectories(select_folder);
                 foreach (string s in FileInSelectFolder)
-                         file_list.Add(s);
+                {
+                   // byte[] _tmp = Encoding.ASCII.GetBytes(s);
+                    file_list.Add(s);
+                }
+                    
                 foreach (string s in FolderInSelectFolder)
                     ScanStack.Push(s);
                                     

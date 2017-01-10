@@ -31,12 +31,13 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.but_view = new System.Windows.Forms.Button();
             this.but_cancel = new System.Windows.Forms.Button();
-            this.txt_daquet = new System.Windows.Forms.TextBox();
+            this.txt_SoBiNhiem = new System.Windows.Forms.TextBox();
             this.txt_tongso = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lab_CurFile = new System.Windows.Forms.Label();
             this.lab_percent = new System.Windows.Forms.Label();
             this.but_scan = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -69,21 +70,21 @@
             this.but_cancel.UseVisualStyleBackColor = true;
             this.but_cancel.Click += new System.EventHandler(this.but_cancel_Click);
             // 
-            // txt_daquet
+            // txt_SoBiNhiem
             // 
-            this.txt_daquet.Enabled = false;
-            this.txt_daquet.Location = new System.Drawing.Point(329, 192);
-            this.txt_daquet.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_daquet.Name = "txt_daquet";
-            this.txt_daquet.Size = new System.Drawing.Size(57, 22);
-            this.txt_daquet.TabIndex = 4;
-            this.txt_daquet.Text = "0";
-            this.txt_daquet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SoBiNhiem.Enabled = false;
+            this.txt_SoBiNhiem.Location = new System.Drawing.Point(235, 191);
+            this.txt_SoBiNhiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SoBiNhiem.Name = "txt_SoBiNhiem";
+            this.txt_SoBiNhiem.Size = new System.Drawing.Size(57, 22);
+            this.txt_SoBiNhiem.TabIndex = 4;
+            this.txt_SoBiNhiem.Text = "0";
+            this.txt_SoBiNhiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_tongso
             // 
             this.txt_tongso.Enabled = false;
-            this.txt_tongso.Location = new System.Drawing.Point(414, 192);
+            this.txt_tongso.Location = new System.Drawing.Point(320, 191);
             this.txt_tongso.Margin = new System.Windows.Forms.Padding(4);
             this.txt_tongso.Name = "txt_tongso";
             this.txt_tongso.Size = new System.Drawing.Size(56, 22);
@@ -94,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 197);
+            this.label1.Location = new System.Drawing.Point(300, 196);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 16);
@@ -132,24 +133,35 @@
             this.but_scan.UseVisualStyleBackColor = true;
             this.but_scan.Click += new System.EventHandler(this.but_scan_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Số file bị nhiễm";
+            // 
             // Form_scan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(886, 322);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.but_scan);
             this.Controls.Add(this.lab_percent);
             this.Controls.Add(this.lab_CurFile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_tongso);
-            this.Controls.Add(this.txt_daquet);
+            this.Controls.Add(this.txt_SoBiNhiem);
             this.Controls.Add(this.but_cancel);
             this.Controls.Add(this.but_view);
             this.Controls.Add(this.progressBar1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_scan";
             this.Text = "MSECAV";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_scan_FormClosed);
             this.Load += new System.EventHandler(this.Form_scan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,11 +173,12 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button but_view;
         private System.Windows.Forms.Button but_cancel;
-        private System.Windows.Forms.TextBox txt_daquet;
+        private System.Windows.Forms.TextBox txt_SoBiNhiem;
         private System.Windows.Forms.TextBox txt_tongso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lab_CurFile;
         private System.Windows.Forms.Label lab_percent;
         private System.Windows.Forms.Button but_scan;
+        private System.Windows.Forms.Label label2;
     }
 }
