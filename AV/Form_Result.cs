@@ -31,9 +31,24 @@ namespace AV
 
         private void Form_Result_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < dataGridView1.Rows.Count; i++)
+            dataGridView1.Rows[0].Cells[1].Value = Result_List_File[0];
+            for (int i =1;i< Result_List_File.Count;i++)
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewCell cell = new DataGridViewTextBoxCell();
+                cell.Value = "";
+                row.Cells.Add(cell);
+                DataGridViewCell cell2 = new DataGridViewTextBoxCell();
+                cell2.Value = Result_List_File[i];
+                row.Cells.Add(cell2);
+                dataGridView1.Rows.Add(row);
+            }
+            dataGridView1.Sort(dataGridView1.Columns["file"], ListSortDirection.Ascending);
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;
+                dataGridView1.Rows[i].Cells[2].Value = "Xóa";
+                
             }
         }
 
@@ -41,7 +56,8 @@ namespace AV
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                row.Cells[2].Value = true;
+                
+                row.Cells[2].Value = "Xóa";
             }
 
         }
