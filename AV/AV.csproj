@@ -79,6 +79,7 @@
     <Compile Include="Form_scan.Designer.cs">
       <DependentUpon>Form_scan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Identifier.cs" />
     <Compile Include="InitFunc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

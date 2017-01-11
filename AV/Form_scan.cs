@@ -72,6 +72,8 @@ namespace AV
         private void but_view_Click(object sender, EventArgs e)
         {
             Form_Result fm = new Form_Result(List_FileInfec);
+            fm.StartPosition = FormStartPosition.CenterParent;
+            fm.ShowDialog();
         }
 
         
@@ -137,6 +139,7 @@ namespace AV
                                 _scan_result = _scanner.ScanMemory(data, Scan_rule);
                                 if (_scan_result.Count > 0 )
                                     List_FileInfec.Add(Scanf_list_FileDir[i]);
+                                
 
                             }
                             catch (Exception  ScanFileErr)
