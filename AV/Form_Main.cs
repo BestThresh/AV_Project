@@ -86,7 +86,7 @@ namespace AV
 
         private void btn_chonfile_Click(object sender, EventArgs e)
         {
-            dialog_folder.ShowDialog();
+            
             btn_OK.Enabled = true;
             if (dialog_folder.ShowDialog() == DialogResult.OK)
             {

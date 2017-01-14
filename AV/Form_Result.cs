@@ -43,7 +43,7 @@ namespace AV
                 row.Cells.Add(cell2);
                 dataGridView1.Rows.Add(row);
             }
-            dataGridView1.Sort(dataGridView1.Columns["file"], ListSortDirection.Ascending);
+            //dataGridView1.Sort(dataGridView1.Columns["file"], ListSortDirection.Ascending);
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
                 dataGridView1.Rows[i].Cells[0].Value = i + 1;
