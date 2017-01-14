@@ -87,14 +87,14 @@
             // 
             // dgv_hanhdong
             // 
-            this.dgv_hanhdong.HeaderText = "Xóa/Bỏ qua";
+            this.dgv_hanhdong.HeaderText = "Hành động";
             this.dgv_hanhdong.Items.AddRange(new object[] {
             "Xóa",
+            "Sửa",
             "Bỏ chọn"});
             this.dgv_hanhdong.Name = "dgv_hanhdong";
             this.dgv_hanhdong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_hanhdong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv_hanhdong.Width = 83;
             this.dgv_hanhdong.Width = 150;
             // 
             // Form_Result

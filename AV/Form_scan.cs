@@ -56,6 +56,7 @@ namespace AV
             bw.DoWork += bw_DoWork;
             bw.ProgressChanged += bw_ProgressChanged;
             bw.RunWorkerCompleted += bw_RunWorkerCompleted;
+
         }
 
         
@@ -71,22 +72,23 @@ namespace AV
 
         private void but_view_Click(object sender, EventArgs e)
         {
+            
             Form_Result fm = new Form_Result(List_FileInfec);
             fm.StartPosition = FormStartPosition.CenterParent;
-            fm.ShowDialog();
+            fm.Show();
+            this.Close();
         }
 
         
 
         private void but_scan_Click(object sender, EventArgs e)
         {
-            but_view.Hide();
             txt_tongso.Text = Scanf_list_FileDir.Count.ToString();
             progressBar1.Minimum = 0;
             progressBar1.Value = 0;
             progressBar1.Maximum = Scanf_list_FileDir.Count;
             bw.RunWorkerAsync();
-            but_view.Show();
+            
         }
         
 
@@ -176,6 +178,7 @@ namespace AV
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             lab_CurFile.Text = "Hoàn thành!";
+            but_view.Enabled = true;
         }
 
         private void Form_scan_FormClosed(object sender, FormClosedEventArgs e)
