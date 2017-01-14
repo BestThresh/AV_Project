@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_xoa_all = new System.Windows.Forms.Button();
-            this.btn_OK = new System.Windows.Forms.Button();
             this.dgv_STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_filenhiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_hanhdong = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.btn_xoa_all = new System.Windows.Forms.Button();
+            this.btn_OK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,28 +47,8 @@
             this.dgv_hanhdong});
             this.dataGridView1.Location = new System.Drawing.Point(-39, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(628, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 319);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btn_xoa_all
-            // 
-            this.btn_xoa_all.Location = new System.Drawing.Point(440, 341);
-            this.btn_xoa_all.Name = "btn_xoa_all";
-            this.btn_xoa_all.Size = new System.Drawing.Size(75, 23);
-            this.btn_xoa_all.TabIndex = 1;
-            this.btn_xoa_all.Text = "Xóa tất cả";
-            this.btn_xoa_all.UseVisualStyleBackColor = true;
-            this.btn_xoa_all.Click += new System.EventHandler(this.btn_xoa_all_Click);
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.Location = new System.Drawing.Point(521, 341);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(68, 23);
-            this.btn_OK.TabIndex = 2;
-            this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // dgv_STT
             // 
@@ -97,11 +77,31 @@
             this.dgv_hanhdong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgv_hanhdong.Width = 150;
             // 
+            // btn_xoa_all
+            // 
+            this.btn_xoa_all.Location = new System.Drawing.Point(440, 341);
+            this.btn_xoa_all.Name = "btn_xoa_all";
+            this.btn_xoa_all.Size = new System.Drawing.Size(75, 23);
+            this.btn_xoa_all.TabIndex = 1;
+            this.btn_xoa_all.Text = "Xóa tất cả";
+            this.btn_xoa_all.UseVisualStyleBackColor = true;
+            this.btn_xoa_all.Click += new System.EventHandler(this.btn_xoa_all_Click);
+            // 
+            // btn_OK
+            // 
+            this.btn_OK.Location = new System.Drawing.Point(521, 341);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(68, 23);
+            this.btn_OK.TabIndex = 2;
+            this.btn_OK.Text = "OK";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
             // Form_Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 376);
+            this.ClientSize = new System.Drawing.Size(620, 376);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.btn_xoa_all);
             this.Controls.Add(this.dataGridView1);
