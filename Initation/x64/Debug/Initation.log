@@ -1,5 +1,5 @@
 ﻿  Initation.cpp
-  LINK : F:\Research-2016-AV\AV_Project\x64\Debug\Initation.dll not found or not built by the last incremental link; performing full link
-     Creating library F:\Research-2016-AV\AV_Project\x64\Debug\Initation.lib and object F:\Research-2016-AV\AV_Project\x64\Debug\Initation.exp
-  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\x64\Debug\Initation.dll
-  Initation.vcxproj -> F:\Research-2016-AV\AV_Project\x64\Debug\Initation.pdb (Full PDB)
+  LINK : F:\AV_Project\x64\Debug\Initation.dll not found or not built by the last incremental link; performing full link
+     Creating library F:\AV_Project\x64\Debug\Initation.lib and object F:\AV_Project\x64\Debug\Initation.exp
+  Initation.vcxproj -> F:\AV_Project\x64\Debug\Initation.dll
+  Initation.vcxproj -> F:\AV_Project\x64\Debug\Initation.pdb (Full PDB)
