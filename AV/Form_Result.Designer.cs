@@ -47,7 +47,8 @@
             this.dgv_hanhdong});
             this.dataGridView1.Location = new System.Drawing.Point(-39, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(650, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(654, 323);
+
             this.dataGridView1.TabIndex = 0;
             // 
             // dgv_STT
@@ -101,7 +102,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 376);
+
+            this.ClientSize = new System.Drawing.Size(627, 376);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.btn_xoa_all);
             this.Controls.Add(this.dataGridView1);

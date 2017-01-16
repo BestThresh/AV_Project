@@ -36,3 +36,14 @@ F:\Project\github\AV_Project\AV\obj\Debug\AV.Form_Result.resources
 F:\Project\github\AV_Project\AV\obj\Debug\AV.Form_scan.resources
 F:\Project\github\AV_Project\AV\obj\Debug\AV.Properties.Resources.resources
 F:\Project\github\AV_Project\AV\obj\Debug\AV.csproj.GenerateResource.Cache
+F:\AV_Project\x64\Debug\AV.exe.config
+F:\AV_Project\AV\obj\Debug\AV.exe
+F:\AV_Project\AV\obj\Debug\AV.pdb
+F:\AV_Project\x64\Debug\AV.exe
+F:\AV_Project\x64\Debug\AV.pdb
+F:\AV_Project\AV\obj\Debug\AV.csprojResolveAssemblyReference.cache
+F:\AV_Project\AV\obj\Debug\AV.Form_Main.resources
+F:\AV_Project\AV\obj\Debug\AV.Form_Result.resources
+F:\AV_Project\AV\obj\Debug\AV.Form_scan.resources
+F:\AV_Project\AV\obj\Debug\AV.Properties.Resources.resources
+F:\AV_Project\AV\obj\Debug\AV.csproj.GenerateResource.Cache
